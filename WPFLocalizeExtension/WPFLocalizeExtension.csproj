@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net35</TargetFramework>
+    <TargetFramework>net45</TargetFramework>
     <AssemblyName>WPFLocalizeExtension</AssemblyName>
     <AssemblyVersion>3.0.1.0</AssemblyVersion>
     <Version>3.0.1</Version>
@@ -20,6 +20,8 @@
     <PackageTags>wpf localization extension globalization resx csv resource language</PackageTags>
     <RepositoryUrl>https://github.com/SeriousM/WPFLocalizationExtension.git</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>WPFLocalizeExtension.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -28,7 +30,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="XAMLMarkupExtensions" Version="1.2.2" />
+    <PackageReference Include="XAMLMarkupExtensions" Version="1.2.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -36,7 +38,14 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Xaml" />
     <Reference Include="WindowsBase" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="binWPF\Debug\" />
+    <Folder Include="binWPF\Release\" />
   </ItemGroup>
 
 </Project> 

@@ -20,7 +20,6 @@ using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Media.Media3D;
-
 using WPFLocalizeExtension.Engine;
 using WPFLocalizeExtension.Providers;
 using WPFLocalizeExtension.TypeConverters;
@@ -31,7 +30,7 @@ namespace WPFLocalizeExtension.Extensions
     /// <summary>
     /// A generic localization extension.
     /// </summary>
-    [ContentProperty("ResourceIdentifierKey")]
+    [System.Windows.Markup.ContentProperty("ResourceIdentifierKey")]
     public class LocExtension : NestedMarkupExtension, INotifyPropertyChanged, IDictionaryEventListener, IDisposable
     {
         #region PropertyChanged Logic
